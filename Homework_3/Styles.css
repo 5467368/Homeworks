@@ -1,0 +1,118 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #F2F0F0;
+}
+#page{
+	margin: 0 auto;
+	padding: 50px 30px;
+	background-color: white;
+	max-width: 1000px;
+}
+.header{
+	margin-bottom: 50px;
+}
+.main_menu{
+	background: gray;
+	height: 50px;
+	font-size: 20px;
+	margin-bottom: 50px;
+}
+.menuMain,
+.menuGoods,
+.menuAbout,
+.menuContacts{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	margin-left: 30px;
+	padding-top: 10px;
+  	height: 40px;
+  	padding-left: 10px;
+  	width: 80px;
+  	padding-right: 10px;
+  	text-align: center;
+}
+.menuMain:hover{
+	background: black;
+}
+.menuGoods:hover{
+	background: black;
+}
+.menuAbout:hover{
+	background: black;
+}
+.menuContacts:hover{
+	background: black;
+}
+ul{
+	float: left;
+	width: 30%;
+	font-size: 20px;
+	border: 1px solid gray;
+	/*margin-right: 50px;*/	
+}
+li{
+	list-style: none;
+	border: 1px solid gray;
+}
+li>a{
+	text-decoration: none;
+	color: black;
+	display: list-item;
+	padding-left: 50px;
+	height: 40px;
+	padding-top: 10px;
+}
+li>a:hover{
+	background: gray;
+	padding-left: 65px;
+	color: white;
+}
+.image{
+	float: right;
+	height: auto;
+	width: 65%;
+}
+img{
+	height: auto;
+	max-width: 550px;
+	border: 1px solid gray;
+	padding: 48px;
+	margin-bottom: 30px;
+}
+.image>p{
+	/*margin-left: 380px;*/
+	font-size: 20px;
+}
+.clearfix:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+.footer{
+	margin-top: 60px;
+	background: #E6E4E4;
+	height: 50px;
+	font-size: 20px;
+}
+.footerMain,
+.footerGoods,
+.footerAbout,
+.footerContacts{
+	display: inline-block;
+	color: black;
+	margin-left: 30px;
+	padding-top: 10px;
+  	height: 40px;
+  	padding-left: 10px;
+  	width: 80px;
+  	padding-right: 10px;
+  	text-align: center;
+  	text-decoration: none;
+}
+span{
+	margin-left: 200px;
+}
