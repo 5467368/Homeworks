@@ -1,0 +1,113 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url("background.png");
+}
+#page{
+	margin: 0 auto;
+	max-width: 1000px;
+	background-color: white;
+	margin-top: 37px;
+}
+.img{
+	height: 414px;
+}
+
+/*МЕНЮ*/
+.mainMenu{
+	height: 40px;
+}
+.menu{
+	float: left;
+	list-style: none;
+	display: block;
+	background: black;
+	width: 1000px;
+}
+.menu ul{
+	float: left;
+	list-style: none;
+	display: block;
+
+}
+.menu ul:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+.menu li{
+	float: left;
+	position: relative;
+}
+
+.menu a{
+	float: left;
+	display: block;
+	text-decoration: none;
+	color: white;
+	width: 142px;
+	text-align: center;
+	height: 30px;
+	font-size: 18px;
+	padding-top: 10px;
+}
+.subMenu{
+	position: absolute;
+	top: 40px;
+	background: black;
+	left: -10000px;
+}
+/*.menu a:hover{
+	border-bottom: 1px solid white;
+}*/
+.menu>li:hover>ul{
+	left: 0;
+	border-top: 1px solid white;
+}
+.subMenu a:hover{
+	background: gray;
+}
+
+.clearfix:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.wrapper{
+	height: auto;
+	width: 100%;
+	overflow: hidden;
+}
+.info{
+	float: left;
+	width: 25%;
+	background: #EDEDED;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 10015px;
+	margin-bottom: -10000px;
+}
+.news{
+	float: right;
+	width: 25%;
+	background: #EDEDED;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 10015px;
+	margin-bottom: -10000px;
+}
+.content{
+	margin-right: 30%;
+	margin-left: 30%;
+	padding-top: 10px;
+	padding-bottom: 20015px;
+	margin-bottom: -20000px;
+}
+.bottom{
+	text-align: center;
+	color: white;
+	margin-top: 5px;
+}
