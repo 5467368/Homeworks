@@ -3,38 +3,77 @@
  	<head>
 		<title>Home work JS №5-6</title>
 		<meta charset="utf-8">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	</head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="home">
-          <a href="" class="Homepage">HOME</a>
+          <span class="Homepage">T I M E R</span>
         </div>
       </header>
-      <section class="main">
+      <section id="splitData"></section>
+      <section class="main" id="main">
         <article class="time">
-          <span class="timer">
-            00:00:00
-          </span><br>
-          <span class="msec">000</span>
+          <span id="timer">00:00:00</span><br>
+          <span id="msec">000</span>
         </article>
-        <article class="startButton">
-          <button id="start">Start</button>
-        </article>
-        <article class="clearButton">
-          <button id="clear">Clear</button>
+        <article class="buttons">
+          <div>
+          <style scoped>
+
+          .button-success,
+          .button-error,
+          .button-warning,
+          .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            width: 100px;
+            height: 50px;
+            margin: auto;
+          }
+
+          .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+          }
+
+          .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+          }
+
+          .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+          }
+
+          .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+          }
+
+          </style>
+
+          <button class="button-success pure-button" id="start">Start</button>
+          <button class="button-error pure-button" id="clear">Clear</button>
+          <button class="button-warning pure-button" id="split">Split</button>
+          </div>
         </article>
       </section>
-      <footer class="footer">
-        <a href="" class="back">Back</a>
-      </footer>
     </div>
 
+    <!-- <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default">Left</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default">Middle</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+    </div> -->
+
+
   </body>
+  <script src="script.js"></script>
 </html>
