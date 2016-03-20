@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+span{
+  display: inline-block;
+  border: 1px solid black;
+  width: 230px;
+  padding: 5px;
+  font-size: 16px;
+  float: right;
+  border-radius: 3px;
+  margin: -6px 85px 5px 0;
+  box-shadow: 0 0 10px 3px #aaaaaa;
+}
+#button{
+  border: 1px solid #d3d3d3;
+}
+div{
+  height: 30px;
+  margin: 10px 10px 10px 10px;
+}

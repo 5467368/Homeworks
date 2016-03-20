@@ -1,15 +1,15 @@
 $(function() {
   var isActive;
   function start(){
-    $(li1).css({
+    $li.eq(0).css({
       cursor: 'default',
       backgroundColor: 'white',
       borderBottom: 'white',
       paddingBottom: '5px'
     });
-    $('.div1').css('display', 'block');
-    $('.div2').css('display', 'none');
-    $('.div3').css('display', 'none');
+      $('article').eq(0).show();
+      $('article').eq(1).hide();
+      $('article').eq(2).hide();
 
   };
 
@@ -70,84 +70,84 @@ $(function() {
   //   console.log($liArr[i]);
   // }
 
+    $li.eq(0).on('click', function(){
+      $(this).css({
+        cursor: 'default',
+        backgroundColor: 'white',
+        borderBottom: 'white',
+        paddingBottom: '5px'
+      });
+      $li.eq(1).css({
+          paddingBottom: 'px',
+          cursor: 'pointer',
+          backgroundColor: '#e6e6e6',
+          border: '1px solid #D3D3D3',
+          borderBottom: 'none',
+      });
+      $li.eq(2).css({
+          paddingBottom: 'px',
+          cursor: 'pointer',
+          backgroundColor: '#e6e6e6',
+          border: '1px solid #D3D3D3',
+          borderBottom: 'none',
+      });
+      $('article').eq(0).show();
+      $('article').eq(1).hide();
+      $('article').eq(2).hide();
+    });
 
-  $(li1).on('click', function(){
-    $(this).css({
-      cursor: 'default',
-      backgroundColor: 'white',
-      borderBottom: 'white',
-      paddingBottom: '5px'
-    });
-    $(li2).css({
-        paddingBottom: 'px',
-        cursor: 'pointer',
-        backgroundColor: '#e6e6e6',
-        border: '1px solid #D3D3D3',
-        borderBottom: 'none',
-    });
-    $(li3).css({
-        paddingBottom: 'px',
-        cursor: 'pointer',
-        backgroundColor: '#e6e6e6',
-        border: '1px solid #D3D3D3',
-        borderBottom: 'none',
-    });
-    $('.div1').css('display', 'block');
-    $('.div2').css('display', 'none');
-    $('.div3').css('display', 'none');
-  });
-  
-  $(li2).on('click', function(){
-    $(this).css({
-      cursor: 'default',
-      backgroundColor: 'white',
-      borderBottom: 'white',
-      paddingBottom: '5px'
-    });
-    $(li1).css({
-        paddingBottom: 'px',
-        cursor: 'pointer',
-        backgroundColor: '#e6e6e6',
-        border: '1px solid #D3D3D3',
-        borderBottom: 'none',
-    });
-    $(li3).css({
-        paddingBottom: 'px',
-        cursor: 'pointer',
-        backgroundColor: '#e6e6e6',
-        border: '1px solid #D3D3D3',
-        borderBottom: 'none',
-    });
-    $('.div2').css('display', 'block');
-    $('.div1').css('display', 'none');
-    $('.div3').css('display', 'none');
-  });
 
-  $(li3).on('click', function(){
-    $(this).css({
-      cursor: 'default',
-      backgroundColor: 'white',
-      borderBottom: 'white',
-      paddingBottom: '5px'
+    $li.eq(1).on('click', function(){
+      $(this).css({
+        cursor: 'default',
+        backgroundColor: 'white',
+        borderBottom: 'white',
+        paddingBottom: '5px'
+      });
+      $li.eq(2).css({
+          paddingBottom: 'px',
+          cursor: 'pointer',
+          backgroundColor: '#e6e6e6',
+          border: '1px solid #D3D3D3',
+          borderBottom: 'none',
+      });
+      $li.eq(0).css({
+          paddingBottom: 'px',
+          cursor: 'pointer',
+          backgroundColor: '#e6e6e6',
+          border: '1px solid #D3D3D3',
+          borderBottom: 'none',
+      });
+      $('article').eq(1).show();
+      $('article').eq(2).hide();
+      $('article').eq(0).hide();
     });
-    $(li2).css({
-        paddingBottom: 'px',
-        cursor: 'pointer',
-        backgroundColor: '#e6e6e6',
-        border: '1px solid #D3D3D3',
-        borderBottom: 'none',
-    });
-    $(li1).css({
-        paddingBottom: 'px',
-        cursor: 'pointer',
-        backgroundColor: '#e6e6e6',
-        border: '1px solid #D3D3D3',
-        borderBottom: 'none',
-    });
-    $('.div3').css('display', 'block');
-    $('.div2').css('display', 'none');
-    $('.div1').css('display', 'none');
-  });
+
+    $li.eq(2).on('click', function(){
+        $(this).css({
+          cursor: 'default',
+          backgroundColor: 'white',
+          borderBottom: 'white',
+          paddingBottom: '5px'
+        });
+        $li.eq(1).css({
+            paddingBottom: 'px',
+            cursor: 'pointer',
+            backgroundColor: '#e6e6e6',
+            border: '1px solid #D3D3D3',
+            borderBottom: 'none',
+        });
+        $li.eq(0).css({
+            paddingBottom: 'px',
+            cursor: 'pointer',
+            backgroundColor: '#e6e6e6',
+            border: '1px solid #D3D3D3',
+            borderBottom: 'none',
+        });
+        $('article').eq(2).show();
+        $('article').eq(1).hide();
+        $('article').eq(0).hide();
+      });
 
   $li.hover(
     function(){
