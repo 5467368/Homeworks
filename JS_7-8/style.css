@@ -2,3 +2,39 @@
   margin: 0;
   padding: 0;
 }
+.wrapper{
+    margin: 0 auto;
+    width: 1000px;
+  }
+
+  section{
+    width: 500px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+    margin: 50px auto;
+    font-size: 15px;
+  }
+
+  .menu{
+    width: 99%;
+    height: 30px;
+    background-color: #cccccc;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    margin: 3px auto 0 auto;
+  }
+
+  li{
+    list-style: none;
+    float: left;
+    padding: 4px 5px;
+    background-color: #e6e6e6;
+    border: 1px solid #D3D3D3;
+    border-bottom: none;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    margin: 4px 0 0 3px;
+    cursor: pointer;
+  }
