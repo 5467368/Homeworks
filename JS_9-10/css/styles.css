@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #ecf0f1;
+}
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.checkboxes{
+	padding: 20px;
+	font: 20px Arial;
+}
+/*Чекбоксы на CSS*/
+/*Чекбокс Слайдер*/
+.checkboxesCSS{
+	padding: 20px;
+}
+.checkboxSlider + label{
+	cursor: pointer;
+}
+.checkboxSlider:not(checked){
+	opacity: 0;
+}
+.checkboxSlider:not(checked) + label{
+	position: relative;
+	padding: 0 0 0 60px;
+}
+.checkboxSlider:not(checked) + label::before{
+	position: absolute;
+	top: -1px;
+	left: 0;
+	width: 50px;
+	height: 26px;
+	border-radius: 13px;
+	background: #F95BA4;
+	content: '';
+}
+.checkboxSlider:not(checked) + label::after{
+	position: absolute;
+	top: 1px;
+	left: 2px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: #aaa;
+	content: '';
+	transition: 0.3s;
+}
+.checkboxSlider:checked + label::after{
+	left: 26px;
+	background-color: green;
+}
+.checkboxSlider:checked + label::before{
+	background-color: yellow;
+}
+
+/*Чекбокс Спрайт*/
+.checkboxSprite{
+	display: none;
+	margin-left: 50px;
+
+}
+
+.checkboxSprite:not(checked) + label{
+	cursor: pointer;
+	position: relative;
+	margin-left: 30px;
+}
+.checkboxSprite:not(checked) + label::before{
+	position: relative;
+	content: '';
+	background: url('../img/checkbox-sprite.png') 0 0;
+	display: inline-block;
+	height: 25px;
+	width: 30px;
+	margin-bottom: -2px;
+	overflow: hidden;
+}
+.checkboxSprite:checked + label::before{
+	position: relative;
+	content: '';
+	background: url('../img/checkbox-sprite.png') 30px 0;
+	display: inline-block;
+	height: 25px;
+	width: 30px;
+	margin-bottom: -2px;
+}
+
+/*Чекбоксы на JS*/
+/*Чекбокс Слайдер*/
+.checkboxesJS{
+	padding: 20px;
+}
+.checkboxSliderJS + label{
+	cursor: pointer;
+}
+.checkboxSliderJS:not(checked){
+	opacity: 0;
+}
+.checkboxSliderJS:not(checked) + label{
+	position: relative;
+	padding: 0 0 0 60px;
+}
+.checkboxSliderJS:not(checked) + label::before{
+	position: absolute;
+	top: -1px;
+	left: 0;
+	width: 50px;
+	height: 26px;
+	border-radius: 13px;
+	background: #F95BA4;
+	content: '';
+}
+.checkboxSliderJS:not(checked) + label::after{
+	position: absolute;
+	top: 1px;
+	left: 2px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: #aaa;
+	content: '';
+	transition: 0.3s;
+}
+label.sliderChecked::after{
+	left: 26px;
+	background-color: green;
+}
+label.sliderChecked::before{
+	background-color: yellow;
+}
+
+/*Чекбокс Спрайт*/
+.checkboxSpriteJS{
+	display: none;
+
+}
+.checkboxSpriteLabelJS {
+	margin-left: 48px;
+}
+.checkboxSpriteJS:not(checked) + label{
+	cursor: pointer;
+	position: relative;
+	padding: 0 0 0 0px;
+}
+.checkboxSpriteJS:not(checked) + label::before{
+	position: relative;
+	content: '';
+	background: url('../img/checkbox-sprite.png') 0 0;
+	display: inline-block;
+	height: 25px;
+	width: 30px;
+	margin-bottom: -2px;
+	overflow: hidden;
+}
+label.checkboxSpriteLabelJS::before{
+	position: relative;
+	content: '';
+	background: url('../img/checkbox-sprite.png') 30px 0;
+	display: inline-block;
+	height: 25px;
+	width: 30px;
+	margin-bottom: -2px;
