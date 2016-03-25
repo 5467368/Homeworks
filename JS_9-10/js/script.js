@@ -1,35 +1,24 @@
 $(function(){
 
-	
-
-
-
-
 	//Чекбокс со слайдером
 	// Так и не заработал
 
-	var $checkboxSliderJS = $('checkboxSliderJS');
 	var $checkboxesJS = $('.checkboxesJS');
 	var $inputSlider = $checkboxesJS.find("input").eq(0);
 	var $label = $checkboxesJS.find('label').eq(0);
 	var $spanSlider = $checkboxesJS.find('span').eq(0);
-	// var $label = $("checkboxSliderLabelJS");
 
 	$label.on('click', changeSlide);
 	console.log('$inputSlider' + $inputSlider);
 
 	function changeSlide(){
-		console.log('$inputSlider before- ' + $inputSlider.prop('checked'));
-		 
+		
 		if (!$inputSlider.prop('checked')) {
-			
-			$inputSlider.prop('checked', true);
-			$label.addClass('.sliderChecked');
+			$label.addClass('sliderChecked')
 		} else {
-			$label.removeClass('.sliderChecked');
-			$inputSlider.prop('checked', false);
-		}
-		console.log('$inputSlider after- ' + $inputSlider.prop('checked'));
+			$label.removeClass('sliderChecked');
+		} 
+		  
 	}
 
 	//Чекбокс со спрайтом
@@ -40,14 +29,10 @@ $(function(){
 
 	function changeSprite(){
 		 
-		if ($inputSprite.attr("checked")) {
-
-			$labelSprite.addClass('sliderChecked');
-			$inputSprite.attr('checked', 'checked');
+		if(!$inputSprite.prop('checked')){
+			$labelSprite.addClass('checkboxSpriteJSchecked');
 		} else {
-			$labelSprite.removeClass('sliderChecked');
-			$inputSprite.attr('checked', false);
+			$labelSprite.removeClass('checkboxSpriteJSchecked');
 		}
-		console.log($inputSprite.attr('checked'));
 	}
 })
