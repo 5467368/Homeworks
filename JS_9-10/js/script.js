@@ -1,31 +1,35 @@
 $(function(){
 
+	
+
+
+
+
 	//Чекбокс со слайдером
 	// Так и не заработал
 
 	var $checkboxSliderJS = $('checkboxSliderJS');
-	var $checkboxesJS = $('checkboxesJS');
-	var $inputSlider = $checkboxesJS.find('input').eq(0);
+	var $checkboxesJS = $('.checkboxesJS');
+	var $inputSlider = $checkboxesJS.find("input").eq(0);
 	var $label = $checkboxesJS.find('label').eq(0);
+	var $spanSlider = $checkboxesJS.find('span').eq(0);
 	// var $label = $("checkboxSliderLabelJS");
 
 	$label.on('click', changeSlide);
-
-	console.log($label);
+	console.log('$inputSlider' + $inputSlider);
 
 	function changeSlide(){
-		console.log('Yes');
+		console.log('$inputSlider before- ' + $inputSlider.prop('checked'));
 		 
-		if ($inputSlider.attr("checked")) {
-
-			$label.addClass('sliderChecked');
-			$inputSlider.attr('checked', 'cheked');
+		if (!$inputSlider.prop('checked')) {
+			
+			$inputSlider.prop('checked', true);
+			$label.addClass('.sliderChecked');
 		} else {
-			$label.removeClass('sliderChecked')
-			$inputSlider.attr('checked', false);
+			$label.removeClass('.sliderChecked');
+			$inputSlider.prop('checked', false);
 		}
-		// console.log($inputSlider.attr('checked'));
-		console.log($inputSlider.attr('checked'));
+		console.log('$inputSlider after- ' + $inputSlider.prop('checked'));
 	}
 
 	//Чекбокс со спрайтом
@@ -35,17 +39,15 @@ $(function(){
 	$labelSprite.on('click', changeSprite);
 
 	function changeSprite(){
-		console.log('Yes');
 		 
 		if ($inputSprite.attr("checked")) {
 
-			$label.addClass('sliderChecked');
-			$inputSprite.attr('checked', 'cheked');
+			$labelSprite.addClass('sliderChecked');
+			$inputSprite.attr('checked', 'checked');
 		} else {
-			$label.removeClass('sliderChecked')
+			$labelSprite.removeClass('sliderChecked');
 			$inputSprite.attr('checked', false);
 		}
-		// console.log($inputSlider.attr('checked'));
 		console.log($inputSprite.attr('checked'));
 	}
 })
