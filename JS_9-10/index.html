@@ -4,14 +4,62 @@
 		<title>Home work JS №9-10</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/checkbox.css">
-
+		<link rel="stylesheet" type="text/css" href="css/carousel.css">
+		<link rel="stylesheet" type="text/css" href="css/cusel.css">
+		<link rel="stylesheet" type="text/css" href="css/selects.css">
+		<link rel="stylesheet" type="text/css" href="css/nav.css">
 	</head>
   <body>
 	  <div class="wrapper">
 
+	  	<section class="carousel">
+	  <!-- Блок карусели -->
+	  		<div class="jcarousel">
+				    <ul>
+				        <li><img src="img/0004.jpg" width="800" height="500" alt=""></li>
+				        <li><img src="img/0005.jpg" width="800" height="500" alt=""></li>
+				        <li><img src="img/0006.jpg" width="800" height="500" alt=""></li>
+				        <li><img src="img/0007.jpg" width="800" height="500" alt=""></li>
+				        <li><img src="img/0008.jpg" width="800" height="500" alt=""></li>
+				    </ul>
+				</div>
+				    <!-- Controls -->
+		    <a class="jcarousel-control-prev" href="#" data-jcarouselcontrol="true">‹</a>
+		    <a class="jcarousel-control-next" href="#" data-jcarouselcontrol="true">›</a>
+		    <p class="jcarousel-pagination" data-jcarouselpagination="true">
+					<a href="#1">1</a>
+					<a href="#2">2</a>
+					<a href="#3">3</a>
+					<a href="#4">4</a>
+					<a href="#5">5</a>
+				</p>
+	  	</section>
 
+	  	<nav class="navigation">
+	  		<ul class="mainMenu">
+	  			<li class="mainLi"><a href="#">Nav 1</a></li>
+	  			<li class="mainLi"><a href="#">Nav 2</a></li>
+	  			<li class="mainLi dropDown"><a href="#">Nav 3&#9660;</a>
+	  				<ul class="subMenu subMenu1">
+	  					<li class="subMenuLi"><a href="#">Nav 3.1</a></li>
+	  					<li class="subMenuLi"><a href="#">Nav 3.2</a></li>
+	  					<li class="subMenuLi dropDown"><a href="#">Nav 3.3&#9658;</a>
+	  						<ul class="subMenu subMenu2">
+	  							<li class="subMenuLi"><a href="#">Nav 3.3.1</a></li>
+			  					<li class="subMenuLi"><a href="#">Nav 3.3.2</a></li>
+			  					<li class="subMenuLi"><a href="#">Nav 3.3.3</a></li>
+	  						</ul>
+	  					</li>
+	  					<li class="subMenuLi"><a href="#">Nav 3.4</a></li>
+	  				</ul>
+	  			</li>
+	  			<li class="mainLi"><a href="#">Nav 4</a></li>
+	  			<li class="mainLi"><a href="#">Nav 5</a></li>
+	  		</ul>
+	  	</nav>	
+
+	  <!-- Блок чекбоксов -->	
 	  	<section class="checkboxes">
-	  <!-- Блок чекбоксов -->
 	  		<article class="checkboxesCSS">
 		  		<input type="checkbox" class="checkboxSlider" id="checkboxSlider" />
 					<label for="checkboxSlider" class="checkboxSliderLabel">Чекбокс Слайдер CSS</label>
@@ -25,10 +73,40 @@
 					<label for="checkboxSpriteJS" class="checkboxSpriteLabelJS">Чекбокс Спрайт JS</label>
 				</article>
 	  	</section>
+
+	  <!-- Селекты -->
+		  <section class="selects">
+		  	<div class="lineForm">
+          <select class="sel80" id="country" name="country" tabindex="2" style="left: 107px !important; width: 200px" >
+          	<option selected="selected" value="1000">Выберите страну...</option>
+            <option value="/russia/">Россия</option>
+            <option value="/russia/2.html">Украина</option>
+            <option value="/чехия.cz/">Чехия</option>
+            <option value="4">Словакия</option>
+            <option value="5">Румыния</option>
+            <option value="6">Болгария</option>
+            <option value="7">Польша</option>
+            <option value="8">Германия</option>
+            <option value="9">Франция</option>
+            <option value="10">Англия</option>
+            <option value="11">Испания</option>
+            <option value="12">Аравия</option>
+          </select>
+        </div>
+		  </section>
+
+<!-- Блок меню -->
+	  
 	  </div>
   </body>
   	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  	<script type="text/javascript" src="js/modernizr-custom.js"></script>
 		<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
-  	<script src="js/script.js"></script>
+		<!-- <script type="text/javascript" src="js/jquery-migrate-1.1.1.min.js"></script> -->
+		<script type="text/javascript" src="js/jScrollPane.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/cusel.min.js"></script>
+		<script type="text/javascript" src="js/jquery.color.plus-names-2.1.0.js"></script>
+  	<script type="text/javascript" src="js/script.js"></script>
 
 </html>
