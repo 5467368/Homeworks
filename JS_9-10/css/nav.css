@@ -1,0 +1,52 @@
+.navigation {
+	margin: 50px 0 50px 0;
+}
+.mainMenu {
+	background-color: #FF6464;
+	height: 40px;
+	width: 100%
+}
+a {
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+	line-height: 40px;
+}
+ul {
+	list-style: none;
+	
+}
+.mainLi {
+	display: inline-block;
+	height: 40px;
+}
+.mainLi a {
+	padding: 0 15px;
+	margin: 0 15px;
+}
+.subMenu {
+	display: none;
+	position: absolute;
+	/*opacity: 1;*/
+	z-index: 5;
+}
+.subMenu1 {
+	top: 41px;
+}
+.subMenu2{
+	left: 241px;
+	top: 0;
+}
+.dropDown{
+	position: relative;
+}
+.subMenuLi{
+	background-color: #FF6464;
+}
+.subMenuLi a {
+	width: 180px;
+	height: 40px;
+	background-color: #FF6464;
+	display: block;
+	border-bottom: 1px solid red;
+}
