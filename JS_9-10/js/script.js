@@ -62,22 +62,24 @@ $(function(){
 					backgroundColor: '#2ACCCC'
 				}, 200)
 				.children('a').animate({
-					backgroundColor: '#2ACCCC'
-				}, 200)
-				.animate({
 					color: 'yellow'
 				}, 0)
+				.animate({
+					backgroundColor: '#2ACCCC'
+				}, 200)
+				
 			},
 			function(){
 				$(this).animate({
 					backgroundColor: '#FF6464'
 				}, 200)
 				.children('a').animate({
-					backgroundColor: '#FF6464'
-				}, 200)
-				.animate({
 					color: '#000'
 				}, 0)
+				.animate({
+					backgroundColor: '#FF6464'
+				}, 200)
+				
 			}
 		)		
 	})
