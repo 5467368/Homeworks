@@ -1,4 +1,9 @@
 (function($) {
+
+	//Если достигается конец карусели или самое начало, соответствующая стрелка пропадает
+	//Если кликнуть на изображении, появится его модальное окно.
+	//Клик в любом месте закрывает модальное окно
+
   	$.fn.myCarousel = function(){
      	
      	// var default = {
@@ -23,11 +28,16 @@
   					right: currentPosition * offset - offset + 'px'
   				}, 500);
   				currentPosition--;
-  				$rightArrow.css('opacity', '1');
-  				if (currentPosition == 0) {
-  					$leftArrow.css('opacity', '0');
-  				};
-  			};
+  				// $rightArrow.css('opacity', '1');
+  				// if (currentPosition == 0) {
+  				// 	$leftArrow.css('opacity', '0');
+  				// };
+
+  				// if (currentPosition <= 0) {
+  				// 	currentPosition = $listLength - 2;
+  				// };
+  			}
+  			else {currentPosition = $listLength - 2;};
   			return this;
   		};
 
@@ -38,12 +48,17 @@
   					right: currentPosition * offset + offset + 'px'
   				}, 500);
   				currentPosition++;
-  				$leftArrow.css('opacity', '1');
+  				// $leftArrow.css('opacity', '1');
 
-  				if (currentPosition == $listLength - 3){
-  					$rightArrow.css('opacity', '0');
+  				// if (currentPosition == $listLength - 3){
+  				// 	$rightArrow.css('opacity', '0');
+  				// };
+
+  			} else {
+  					// (currentPosition >= $listLength - 3) {
+  					currentPosition = -1;
   				};
-  			};
+  			// };
   			return this;
   		};
 

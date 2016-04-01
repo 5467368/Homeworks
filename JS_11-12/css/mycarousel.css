@@ -28,6 +28,7 @@
 }
 .mycarousel-element img {
     max-width: 250px;
+    max-height: 370px;
     
 }
 .mycarousel-arrow-left,
@@ -41,7 +42,7 @@
     margin-top: 185px;
 }
 .mycarousel-arrow-left{
-	opacity: 0;
+	/*opacity: 0;*/
 }
 .mycarousel-arrow-left span,
 .mycarousel-arrow-right span{
@@ -67,14 +68,14 @@ p{
 .mycarousel-arrow-right {
     margin-left: 25px;
 }
-.bigimg {
+.bigimg img{
 	position: absolute;
-	width: 800px;
-	height: 500px;
+	max-width: 1000px;
+	max-height: 700px;
 	top: 50%;
 	left: 50%;
 	text-align: center;
-	margin: -250px 0 0 -400px;
+	margin: -350px 0 0 -380px;
 }
 .overlay {
 	position: fixed;
