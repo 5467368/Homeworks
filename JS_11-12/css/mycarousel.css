@@ -41,9 +41,6 @@
     border: 1px black solid;
     margin-top: 185px;
 }
-.mycarousel-arrow-left{
-	/*opacity: 0;*/
-}
 .mycarousel-arrow-left span,
 .mycarousel-arrow-right span{
 	text-align: center;

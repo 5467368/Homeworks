@@ -1,3 +1,5 @@
 $(function(){
-	$('.wrapper').myCarousel();
+	$('.wrapper').myCarousel({
+     		carouselCircle: true
+     	});
 });

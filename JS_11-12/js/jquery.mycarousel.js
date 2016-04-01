@@ -1,14 +1,18 @@
 (function($) {
 
-	//Если достигается конец карусели или самое начало, соответствующая стрелка пропадает
+	//По умолчанию крутиться по кругу (carouselCircle: true)
+	//(carouselCircle: false) - если достигается конец карусели или самое начало, соответствующая стрелка пропадает
 	//Если кликнуть на изображении, появится его модальное окно.
 	//Клик в любом месте закрывает модальное окно
 
-  	$.fn.myCarousel = function(){
+  	$.fn.myCarousel = function(options){
      	
-     	// var default = {
+     	var defaults = {
+     		carouselCircle: true
+     	};
 
-     	// };
+     	var settings = $.extend(defaults, options);
+
      	var $body = $('body');
   		var $leftArrow = $('.mycarousel-arrow-left');
   		var $rightArrow = $('.mycarousel-arrow-right');
@@ -21,6 +25,10 @@
   		var $element = $carouselList.find('img');
   		var $modal, $overlay;
 
+		if (!defaults.carouselCircle) {
+			$leftArrow.css('opacity', '0');
+		};  		
+
   		function leftClick(){
 
   			if (currentPosition > 0) {
@@ -28,16 +36,18 @@
   					right: currentPosition * offset - offset + 'px'
   				}, 500);
   				currentPosition--;
-  				// $rightArrow.css('opacity', '1');
-  				// if (currentPosition == 0) {
-  				// 	$leftArrow.css('opacity', '0');
-  				// };
 
-  				// if (currentPosition <= 0) {
-  				// 	currentPosition = $listLength - 2;
-  				// };
-  			}
-  			else {currentPosition = $listLength - 2;};
+  				if (!defaults.carouselCircle){
+	  				$rightArrow.css('opacity', '1');
+	  				if (currentPosition == 0) {
+	  					$leftArrow.css('opacity', '0');
+	  				};
+	  				return this;
+  				};
+
+  			} else {
+  				currentPosition = $listLength - 2;
+  			};
   			return this;
   		};
 
@@ -48,17 +58,18 @@
   					right: currentPosition * offset + offset + 'px'
   				}, 500);
   				currentPosition++;
-  				// $leftArrow.css('opacity', '1');
 
-  				// if (currentPosition == $listLength - 3){
-  				// 	$rightArrow.css('opacity', '0');
-  				// };
+  				if (!defaults.carouselCircle) {
+	  				$leftArrow.css('opacity', '1');
+	  				if (currentPosition == $listLength - 3){
+	  					$rightArrow.css('opacity', '0');
+	  				};
+	  				return this;
+				};
 
   			} else {
-  					// (currentPosition >= $listLength - 3) {
   					currentPosition = -1;
   				};
-  			// };
   			return this;
   		};
 
