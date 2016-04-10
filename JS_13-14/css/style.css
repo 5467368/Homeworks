@@ -45,3 +45,11 @@ span {
 	font-size: 30px;
 	line-height: 200px;
 }
+ul{
+	list-style: none;
+}
+input,
+label {
+	cursor: pointer;
+	padding-left: 10px; 
+}

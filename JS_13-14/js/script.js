@@ -6,18 +6,17 @@ $(function(){
   var mathTest = [
     {
       question:  'Сколько будет 2*2?',
-      answers: [{
-        1:'4', 2:'6', 3:'9'}],
+      answers: ['4', '6','9'],
       trueAnswer: 1
     },
     {
       question:  'Сколько будет 3*3?',
-      answers: [{1:'4', 2:'6', 3:'9'}],
+      answers: ['12', '6', '9'],
       trueAnswer: 3
     },
     {
       question:  'Сколько будет 4*4?',
-      answers: [{1:'18', 2:'16', 3:'27'}],
+      answers: ['18', '16', '27'],
       trueAnswer: 2
     }
   ];
@@ -25,18 +24,16 @@ $(function(){
 //Шаблон
   var tamplate = 
   '<script type="text/html" id="data">' +
-    '<% for (var i = 1; i < test.length + 1; i++) {%>' +
-      '<p><%= i + ". " + test[i-1].question %>' +
+    '<% for (var i = 1; i < test.length + 1; i++) { %>' +
+      '<p><%= i + ". " + test[i-1].question %></p>' +
       '<ul>' +
       '<% for (var j = 1; j < test[i-1].answers.length + 1; j++) {%>' +
-        '<p><li>' +
-          '<input type="radio" name="an_ + i + \" id="an_ + i + "-" + j + \" value="+j+\">' +
-          '<label for="an_" + i + "-" + j + \"><%= test[i-1].answers[j-1] %></label>' +
-        '</li></p>}' +
-    '</ul></p>}';
-
-
-
+        '<li>' +
+          '<input type="radio" name= <%= "an_" + i %> id= <%= "an_" + i + "-" + j %> value="<%= j %>">' +
+          '<label for= <%= "an_" + i + "-" + j %> ><%= " " + test[i-1].answers[j-1] %></label>' +
+        '</li><% }; %>' +
+    '</ul><% }; %>'+
+  '</script>';
 
 
 //Создание DOM
@@ -52,46 +49,12 @@ $(function(){
 
   newElement = document.createElement('form');
   newElement.setAttribute('name', 'test');
-  newElement.setAttribute('method', 'POST');
+  newElement.setAttribute('method', 'GET');
   newElement.setAttribute('action', '');
   wrapper.appendChild(newElement);
 
   //Вставляем теги <UL>
   var form = wrapper.querySelector('form');
-
-  // for(var i=1; i < testQuestions.length + 1; i++){
-  //   newElement = document.createElement('p');
-  //   newElement.innerHTML = i + '. ' + test[i-1].question;
-  //   form.appendChild(newElement);
-
-  //   newElement = document.createElement('ul');
-  //   form.appendChild(newElement);
-
-  // // Вставляем в <UL> теги <LI>
-  //   var ul = form.querySelectorAll('ul');
-  //   for(var j=1; j < testQuestions[i-1].answers.length +1; j++){
-  //     newElement = document.createElement('li');
-  //     newElement.style.listStyle = 'none';
-  //     ul[i-1].appendChild(newElement);
-
-  //     var li = ul[i-1].querySelectorAll('li');
-  //     newElement = document.createElement('input');
-  //     newElement.setAttribute('type', 'radio');
-  //     newElement.setAttribute('name', 'an_'+i);
-  //     newElement.setAttribute('id', 'an_'+i+'-'+j);
-  //     newElement.setAttribute('value', j);
-  //     li[j-1].appendChild(newElement);
-
-  //     newElement = document.createElement('label');
-  //     newElement.setAttribute('for', 'an_'+i+'-'+j);
-  //     newElement.innerHTML = testQuestions[i-1].answers[j-1];
-  //     newElement.style.marginLeft = '5px';
-  //     li[j-1].appendChild(newElement);
-
-  //     newElement = document.createElement('br');
-  //     li[j-1].appendChild(newElement);
-  //   }
-  // }
 
   var $form = $("form");
   $form.append(tamplate); //Вставка шаблона в форму
@@ -107,16 +70,18 @@ $(function(){
   var $body = $('body');
 
 //Работа с хранилищем
+  console.log('mathTest = ' + mathTest);
   localStorage.setItem('mathTest', JSON.stringify(mathTest));
-  var testQuestions = localStorage.getItem('mathTest');
+  var testQuestions = JSON.parse(localStorage.getItem('mathTest'));
+  console.log('testQuestions = ' + testQuestions);
+  console.log('testQuestions.length = ' + testQuestions.length);
 
 //Шаблонизация
   var $tmplHTML = $('#data').html();
   var inserts = tmpl($tmplHTML, {
     test: testQuestions
   });
-  $form.append(inserts);
-
+  $('button').before(inserts);
 
 //Логика проверок
   $form.submit(checkSubmit);
@@ -150,10 +115,7 @@ $(function(){
           .append($buttonOK);
     $buttonOK.on('click', function() {
               location.reload();    //JavaScript функция перегрузки страницы
-            });
-
-    // $overlay.one('click', hideOverlay);
-    // $modal.one('click', hideOverlay);
+   });
   }
 
 });
