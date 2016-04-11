@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  width: 700px;
+  position: relative;
+  min-height: 500px;
+  margin: 0 auto;
+}
+#inputbox {
+  position: absolute;
+  width: 700px;
+  height: 30px;
+  top: 40%;
+  left: 50%;
+  margin-left: -350px;
+
+}
+#input-form {
+  height: 100%;
+  width: 100%;
+  font: 14px Arial;
+}
