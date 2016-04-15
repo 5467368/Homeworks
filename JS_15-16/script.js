@@ -1,7 +1,6 @@
 var searchRes;
 function GoogleCallback(func, data){
     searchRes = data.results;
-    console.log(searchRes);
 };
 console.log(searchRes);
 
