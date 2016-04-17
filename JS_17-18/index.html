@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en>"
+ 	<head>
+		<title>Home work JS №11-12</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/grunt/total.min.css">
+		<link rel="stylesheet" type="text/css" href="css/gulp/total.min.css">
+	</head>
+  <body>
+	  	<div class="wrapper">
+	  		<section class="carousel">
+			  	<div class="mycarousel-arrow-left"><span>&#9668;</span></div>
+				    <div class="mycarousel-hider">
+				        <ul class="mycarousel-list">
+				            <li class="mycarousel-element"><img src="img/BA-110BC-1AE.jpg" alt=""><p>BA-110BC-1AE</p></li>
+				            <li class="mycarousel-element"><img src="img/BEM-506BD-7AVDF.jpg" alt=""><p>BEM-506BD-7AVDF</p></li>
+				            <li class="mycarousel-element"><img src="img/BGD-180-3E.jpg" alt=""><p>BGD-180-3E</p></li>
+				            <li class="mycarousel-element"><img src="img/EQW-T620DB-1A.jpg" alt=""><p>EQW-T620DB-1A</p></li>
+				            <li class="mycarousel-element"><img src="img/G-9330A-4ER.jpg" alt=""><p>G-9330A-4ER</p></li>
+				            <li class="mycarousel-element"><img src="img/GA-110SL-3AER.jpg" alt=""><p>GA-110SL-3AER</p></li>
+				            <li class="mycarousel-element"><img src="img/GA-400-9AE.jpg" alt=""><p>GA-400-9AE</p></li>
+				            <li class="mycarousel-element"><img src="img/GW-9230BJ-1ER.jpg" alt=""><p>GW-9230BJ-1ER</p></li>
+				            <li class="mycarousel-element"><img src="img/PRG-270-4E.jpg" alt=""><p>PRG-270-4E</p></li>
+				            <li class="mycarousel-element"><img src="img/PRW-1300-1VER.jpg" alt=""><p>PRW-1300-1VER</p></li>
+				            <li class="mycarousel-element"><img src="img/SGW-500H-2B.jpg" alt=""><p>SGW-500H-2B</p></li>
+				            <li class="mycarousel-element"><img src="img/SHE-3503D-8AER.jpg" alt=""><p>SHE-3503D-8AER</p></li>
+				        </ul>
+				    </div>
+			  	<div class="mycarousel-arrow-right"><span>&#9658;</span></div>
+			</section>
+			
+		  	<section class="tamplate">
+		  		<script type="text/html" id="tmplscript">
+
+		  			<div class="title">
+				        <p>
+				            <h1><%= name %></h1>
+				            <img class="photo" src="<%= image %>" 
+				              width="200" height="300" alt="Здесь должен быть я" align="middle">
+				        </p>
+				        <p class = "text1"><%= text1 %></p>
+			      	</div> 
+
+			        <div class = "text2">
+			          <p>Хочу учить Frontend, потому что:</p>
+			          <ul>
+			            <li><%= li1 %></li>
+			            <li><%= li2 %></li>
+			            <li><%= li3 %></li>
+			          </ul>
+			        </div> 
+			        
+			        <div class = "text3">
+			          <p>Мой номер телефона:<br>
+			            <%= phone %><br>
+			          </p>
+			          <p>Мой профиль в 
+			            <a href="<%= profile %>" target="_blank">Facebook</a>
+			          </p>
+			        </div>
+
+			        <div class = "text4">
+			          <p>
+			            В заключении:<br>
+			            <%= text4 %>
+			          </p>
+			        </div> 
+		  		</script>
+		  	</section>
+	  	</div>
+  </body>
+  	<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  	<script type="text/javascript" src="js/grunt/total.min.js"></script>
+	<script type="text/javascript" src="js/gulp/total.min.js"></script>
+</html>
