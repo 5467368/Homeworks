@@ -258,7 +258,8 @@
   line-height: 260px;
   text-align: center;
   font-size: 80px;
-  transition: 0.3s; }
+  transition: 0.3s;
+  font-weight: 100; }
 
 .bg2 {
   position: absolute;

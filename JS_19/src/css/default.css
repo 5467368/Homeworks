@@ -88,7 +88,12 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
 
 
 
