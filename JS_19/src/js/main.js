@@ -93,11 +93,11 @@ $(function () {
 $(function () {
 
     var block = '<div class="modal">+</div>';
-    var $image = $('.servises a');
-    $image.mouseenter(function () {
+    var $image = $('.servises li');
+    $image.hover(function () {
             $(this).append(block)
-        });
-    $('.servises a').mouseleave(function () {
+        },
+    function () {
             $('.servises').find('div').remove()
         }
     )
