@@ -14,7 +14,7 @@ var cssmin = require('gulp-cssmin');
 
 // Конкатенация и минификация файлов
 gulp.task('minify', function(){
-    gulp.src('./js/**/*.js')
+    gulp.src('./js/*.js')
         .pipe(concat('total.js'))
         .pipe(gulp.dest('js/gulp'))
         .pipe(rename('total.min.js'))
@@ -23,7 +23,7 @@ gulp.task('minify', function(){
 });
 
 gulp.task('mincss', function(){
-    gulp.src('./css/**/*.css')
+    gulp.src('./css/*.css')
         .pipe(concat('total.css'))
         .pipe(gulp.dest('css/gulp'))
         .pipe(rename('total.min.css'))
