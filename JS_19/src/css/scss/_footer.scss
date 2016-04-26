@@ -1,0 +1,97 @@
+//SCSS File
+.prefooter {
+    position: absolute;
+    top: 2142px;
+}
+.bg3 {
+    position: absolute;
+    top: 2292px;
+    background-color: #2a2d32;
+    height: 325px;
+    width: 100%;
+}
+.bg4 {
+    position: absolute;
+    top: 2617px;
+    background-color: #35383c;
+    height: 60px;
+    width: 100%;
+}
+.footer {
+    position: relative;
+    top: 1821px;
+
+    :last-child {
+        margin-right: 0;
+    }
+    ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        font-size: 13px;
+        font-family: "Arial";
+        color: rgba(255, 255, 255, 0.302);
+    }
+    a:hover {
+        color: #248cec;
+    }
+    p {
+        font-size: 16px;
+        font-family: "Ubuntu", Arial;
+        color: rgb(255, 255, 255);
+    }
+}
+.fm-main {
+    display: inline-block;
+    width: 255px;
+    margin: 58px 40px 0 0;
+}
+.sub-menu {
+    margin-top: 31px;
+
+    li {
+        height: 35px;
+        border-bottom: 1px solid #393939;
+        line-height: 35px;
+    }
+    :last-child {
+        border-bottom: none;
+    }
+}
+
+.under-footer {
+    position: relative;
+    top: 1915px;
+    font-size: 13px;
+    font-family: "Arial";
+    color: rgba(255, 255, 255, 0.2);
+
+    a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.2);
+        background: url("../../img/email.png") no-repeat left center;
+        padding-left: 30px;
+        margin-left: 40px;
+
+
+    }
+    a:hover {
+        color: #248cec;
+    }
+    span {
+        display: inline-block;
+    }
+}
+.copyright {
+    float: right;
+}
+.location {
+    background: url("../../img/location.png") no-repeat left center;
+    padding-left: 25px;
+}
+.phone {
+    background: url("../../img/iphone.png") no-repeat left center;
+    padding-left: 20px;
+    margin-left: 30px;
+}
