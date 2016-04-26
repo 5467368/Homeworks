@@ -1,5 +1,5 @@
 // Avoid `console` errors in browsers that lack a console.
-(function() {
+$(function() {
     var method;
     var noop = function () {};
     var methods = [
@@ -87,4 +87,18 @@ $(function () {
     var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     $('.date').text(date.getDate());
     $('.month').text(month[date.getMonth()]);
+});
+
+// Modal window
+$(function () {
+
+    var block = '<div class="modal">+</div>';
+    var $image = $('.servises a');
+    $image.mouseenter(function () {
+            $(this).append(block)
+        });
+    $('.servises a').mouseleave(function () {
+            $('.servises').find('div').remove()
+        }
+    )
 });
