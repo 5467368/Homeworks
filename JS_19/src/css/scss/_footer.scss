@@ -2,7 +2,50 @@
 .prefooter {
     position: absolute;
     top: 2142px;
+
+    li {
+        display: inline-block;
+    }
+    a {
+        display: block;
+        height: 65px;
+        background: url("../../img/partners.png") no-repeat;
+    }
+    a:hover {
+        background-position-y: -65px;
+    }
+    .partner1 {
+        width: 110px;
+        margin-left: 16px;
+        background-position-x: -17px;
+    }
+    .partner2 {
+        width: 110px;
+        background-position-x: -208px;
+        margin-left: 78px;
+    }
+    .partner3 {
+        width: 160px;
+        background-position-x: -409px;
+        margin-left: 87px;
+    }
+    .partner4 {
+        width: 110px;
+        background-position-x: -645px;
+        margin-left: 73px;
+    }
+    .partner5 {
+        width: 125px;
+        background-position-x: -840px;
+        margin-left: 81px;
+    }
+    .partner6 {
+        width: 110px;
+        background-position-x: -1026px;
+        margin-left: 58px;
+    }
 }
+
 .bg3 {
     position: absolute;
     top: 2292px;
@@ -24,11 +67,7 @@
     :last-child {
         margin-right: 0;
     }
-    ul {
-        list-style: none;
-    }
     a {
-        text-decoration: none;
         font-size: 13px;
         font-family: "Arial";
         color: rgba(255, 255, 255, 0.302);
@@ -68,7 +107,6 @@
     color: rgba(255, 255, 255, 0.2);
 
     a {
-        text-decoration: none;
         color: rgba(255, 255, 255, 0.2);
         background: url("../../img/email.png") no-repeat left center;
         padding-left: 30px;
