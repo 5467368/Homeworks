@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework JS_23-24</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+    <script type="text/tmpl" id="wrapper-tmpl">
+        <div class="wrapper">
+            <p><h4>Сам список кликабельный для редактирования. Сохранение по "Enter" или клике на другом элементе</h4></p>
+            <ol class="item-list"></ol>
+            <div class="controls">
+                <input type="text" class="item-value">
+                <button class="item-add">Add me</button>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/tmpl" id="list-tmpl">
+        <% for(var  i = 0; i < data.length; i++) { %>
+            <li>
+                <span data-value="<%= i %>" class="item-text"><%=  data[i] %></span>
+                <span data-value="<%= i %>" class="item-delete">x</span>
+            </li>
+        <% }; %>
+    </script>
+
+</body>
+</html>

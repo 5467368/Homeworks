@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  width: 1000px;
+  margin: 50px auto; }
+
+.item-delete {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border: 2px solid black;
+  border-radius: 9px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 14px;
+  margin: 10px;
+  color: red; }
+
+.item-delete:hover {
+  background-color: red;
+  color: black; }
+
+ol {
+  margin: 30px; }
+
+.item-add {
+  width: 70px;
+  height: 30px;
+  background-color: #2fd8ff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600; }
+
+.item-value {
+  height: 30px;
+  background-color: antiquewhite;
+  border: none;
+  border-radius: 5px; }
+
+.item-text {
+  background-color: antiquewhite;
+  display: inline-block;
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */
