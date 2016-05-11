@@ -44,4 +44,7 @@ ol {
   display: inline-block;
   cursor: pointer; }
 
+.item-edit {
+  border: none; }
+
 /*# sourceMappingURL=style.css.map */
