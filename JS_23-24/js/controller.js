@@ -2,10 +2,11 @@
  * Created by Мирослав on 05.05.2016.
  */
 define (
-    'Controller',
-    ['jquery'],
+    'controller',
+    ['jquery', 'tmpl', 'model', 'view'],
 
     function Controller(model, view) {
+        var self = this;
         view.elements.listContainer.on('click', '.item-delete', removeItem);
         view.elements.addBtn.on('click', addItem);
         view.elements.listContainer.on('click', '.item-text', editItem);
@@ -50,5 +51,7 @@ define (
             view.hideEdit();
             view.renderList(model.data);
         }
+        
+        return self;
     }
 );

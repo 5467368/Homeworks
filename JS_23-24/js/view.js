@@ -2,8 +2,9 @@
  * Created by Мирослав on 05.05.2016.
  */
 define(
-    'View',
-    ['jquery', 'tmpl'],
+    'view',
+    ['jquery', 'tmpl', 'model'],
+    
     function View(model) {
         var self = this;
         self.renderList = function (data) {
@@ -33,5 +34,7 @@ define(
             $('.item-edit').remove();
         };
         init();
+        
+        return self;
     }
 );
