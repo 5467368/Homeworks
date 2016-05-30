@@ -1,0 +1,38 @@
+[
+  {
+    "text": "Lorem ipsun Lorem ipsunLorem ipsunLorem ipsunLorem ipsun  Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun",
+    "name": "NAME",
+    "colors": {
+      "none": "#FFFFFF",
+      "red": "#FF0000",
+      "green": "#008B00",
+      "yellow": "#EEEE00"
+    },
+    "activeColor": "",
+    "labels": ["Personal", "Job", "Important"],
+    "activeLabels": [],
+    "categories": {
+      "personal": "Personal",
+      "job": "Job",
+      "important": "Important"
+    },
+    "activeCategory": "",
+    "lastChange": null
+  },
+  {
+    "text": "Lorem ipsun Lorem ipsunLorem ipsunLorem ipsunLorem ipsun  Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun Lorem ipsun",
+    "name": "NAME",
+    "colors": {
+      "red": "#FF0000",
+      "green": "#008B00",
+      "yellow": "#EEEE00"
+    },
+    "labels": ["Personal", "Job", "Important"],
+    "categories": {
+      "personal": "Personal",
+      "job": "Job",
+      "important": "Important"
+    },
+    "lastChange": ""
+  }
+]

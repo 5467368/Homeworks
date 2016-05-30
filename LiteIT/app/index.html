@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesManager">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes Maneger</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-init="notesList.noteManagerInit()" ng-controller="NotesController as notesList">
+<div class="wrapper">
+    <h1>{{"AngularJS"}}</h1>
+        <span class="add-note" ng-controller="AddNewNote as newNote" ng-click="newNote.addNewNote()">
+            <button type="button" class="btn btn-success" aria-haspopup="true" aria-expanded="false">Добавить</button>
+        </span>
+
+    <section class="list-group_ group-style">
+        <div class="list-group-item note-style" ng-repeat="note in notesList.notes track by $index" ng-style="{'background-color': '{{note.activeColor}}'}" ng-class="activeColor"> <!-- ng-style получает правильный цвет, но не применяет почему-то -->
+            <div class="name-editor" ng-controller="NameEditorController as nameEditor">
+                <h4 class="list-group-item-heading name-style" ng-click="nameEditor.editName()" ng-hide="nameEditor.nameEditActive">{{note.name}}</h4>
+                <input autofocus type="text" class="input-name"
+                       ng-value="note.name"
+                       ng-model="nameEditor.nameValue"
+                       ng-show="nameEditor.nameEditActive"
+                       ng-keyup="$event.keyCode == 13 && (nameEditor.editNameEnd(note))"
+                       ng-blur="nameEditor.editNameEnd(note)">
+            </div>
+
+            <div class="text-editor" ng-controller="TextEditorController as textEditor">
+                <div class="list-group-item-text item-text-style" ng-click="textEditor.editText()" ng-hide="textEditor.textEditActive">{{note.text}}</div>
+                <textarea autofocus class="input-text"
+                          ng-model="current"
+                          ng-show="textEditor.textEditActive"
+                          ng-keyup="$event.keyCode == 13 && (textEditor.editTextEnd(note))"
+                          ng-blur="textEditor.textValue = current; textEditor.editTextEnd(note);">{{textEditor.textValue}}
+                </textarea>
+            </div>
+
+
+            <div class="options" ng-controller="OptionsController as options">
+                <ul class="option-lists">
+
+                    <li class="colors-select option-list" ng-click="options.showOptions(1)">
+                        <span class="glyphicon glyphicon-text-background" aria-hidden="true"
+                              ng-mouseenter="options.showTooltip(1)"
+                              ng-mouseleave="options.hideTooltip()"></span>
+                        <span class="label label-default show-tooltip" ng-show="options.tooltip === 1">Colors</span>
+                        <div class="show-options"
+                             ng-show="options.options === 1"
+                             ng-mouseleave="options.options = 0">
+
+                            <ul class="color-select" ng-controller="ColorsController as color">                                                              <!-- Не получается поменять цвет на экране, -->
+                                <li class="color-item color-none" ng-click="color.setColor(note, 'white')"></li>       <!-- хотя  ng-style="{'background-color': '{{note.activeColor}}'}" получает правильный цвет-->
+                                <li class="color-item color-red" ng-click="color.setColor(note, '#FF0000')"></li>             <!-- работает только после перезагрузки -->
+                                <li class="color-item color-green" ng-click="activeColor='color-green' && color.setColor(note, 'green')"></li>
+                                <li class="color-item color-yellow" ng-click="color.setColor(note, 'yellow')"></li>
+                            </ul>
+
+                        </div>
+                    </li>
+
+                    <li class="category-select option-list"
+
+                        ng-mouseenter="options.showTooltip(2)"
+                        ng-mouseleave="options.hideTooltip()">
+                        <!--ng-controller="CategoryController as categories"-->
+
+                        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                        <span class="label label-default show-tooltip" ng-show="options.tooltip === 2">Category</span>
+                        <!--<ul class="category-list">-->
+                            <!--<li class="category-item" ng-repeat="category in categories">-->
+                                <!--<label>-->
+                                    <!--<input type="checkbox"/>-->
+                                <!--</label>-->
+
+                            <!--</li>-->
+                        <!--</ul>-->
+                    </li>
+                    <li class="labels-select option-list" ng-mouseenter="options.showTooltip(3)" ng-mouseleave="options.hideTooltip()">
+                        <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+                        <span class="label label-default show-tooltip" ng-show="options.tooltip === 3">Labels</span>
+                    </li>
+                    <li class="info-select option-list" ng-controller="InfoController as itemInfo" ng-mouseenter="options.showTooltip(4)" ng-mouseleave="options.hideTooltip()">
+                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        <span class="label label-default show-tooltip" ng-show="options.tooltip === 4">{{itemInfo.info(note) | date}}</span>
+                    </li>
+
+                    <li class="delete-select option-list" style="margin-right:0"
+                        ng-controller="DeleteController as deleteItem"
+                        ng-mouseenter="options.showTooltip(5)"
+                        ng-mouseleave="options.hideTooltip()"
+                        ng-click="deleteItem.deleteNote($index)">
+
+                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                        <span class="label label-default show-tooltip" ng-show="options.tooltip === 5">Delete</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
