@@ -15,8 +15,12 @@
             <button type="button" class="btn btn-success" aria-haspopup="true" aria-expanded="false">Добавить</button>
         </span>
 
+    <!--Начало-->
+
     <section class="list-group_ group-style">
         <div class="list-group-item note-style" ng-repeat="note in notesList.notes track by $index" ng-style="{'background-color': '{{note.activeColor}}'}" ng-class="activeColor"> <!-- ng-style получает правильный цвет, но не применяет почему-то -->
+
+            <!--Модуль Названия-->
             <div class="name-editor" ng-controller="NameEditorController as nameEditor">
                 <h4 class="list-group-item-heading name-style" ng-click="nameEditor.editName()" ng-hide="nameEditor.nameEditActive">{{note.name}}</h4>
                 <input autofocus type="text" class="input-name"
@@ -27,6 +31,7 @@
                        ng-blur="nameEditor.editNameEnd(note)">
             </div>
 
+            <!--Модуль текста-->
             <div class="text-editor" ng-controller="TextEditorController as textEditor">
                 <div class="list-group-item-text item-text-style" ng-click="textEditor.editText()" ng-hide="textEditor.textEditActive">{{note.text}}</div>
                 <textarea autofocus class="input-text"
@@ -37,7 +42,7 @@
                 </textarea>
             </div>
 
-
+            <!--Опции заметки-->
             <div class="options" ng-controller="OptionsController as options">
                 <ul class="option-lists">
 
@@ -81,11 +86,14 @@
                         <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
                         <span class="label label-default show-tooltip" ng-show="options.tooltip === 3">Labels</span>
                     </li>
+
+                    <!--Инфо о заметке-->
                     <li class="info-select option-list" ng-controller="InfoController as itemInfo" ng-mouseenter="options.showTooltip(4)" ng-mouseleave="options.hideTooltip()">
                         <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
                         <span class="label label-default show-tooltip" ng-show="options.tooltip === 4">{{itemInfo.info(note) | date}}</span>
                     </li>
 
+                    <!--Удаление заметки-->
                     <li class="delete-select option-list" style="margin-right:0"
                         ng-controller="DeleteController as deleteItem"
                         ng-mouseenter="options.showTooltip(5)"
