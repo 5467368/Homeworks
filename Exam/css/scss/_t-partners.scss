@@ -1,0 +1,99 @@
+@media (min-width: 768px) and (max-width: 1439px) {
+
+    .partners-section {
+        position: relative;
+        top: -128px;
+        text-align: center;
+    }
+    .partners-section-title {
+        width: 415px;
+    }
+    .partners-list {
+        display: inline-block;
+    }
+    .patners-list-ul {
+        width: 500px;
+        margin: 30px auto 0 auto;
+    }
+    .partners-list {
+        display: inline-block;
+        width: 230px;
+        height: 240px;
+        margin-bottom: 20px;
+    }
+    .partners-list-items {
+        position: relative;
+        width: inherit;
+
+    }
+    .partner-list-name {
+        top: -21px;
+        right: -10px;
+    }
+    .partner-list-about {
+        height: 65px;
+    }
+    .partner1-photo {
+        left: -12px;
+
+    }
+    .partner1-img {
+        top: -34px;
+        left: 126px;
+    }
+    .partner1-name {
+        top: -21px;
+        right: 12px;
+    }
+    .partner1-about {
+        top: -6px;
+        right: 12px;
+    }
+    .partner2-photo {
+        left: 13px;
+    }
+
+    .partner2-img {
+        top: -34px;
+        background-position-y: -42px;
+        left: 148px;
+    }
+    .partner2-name {
+
+    }
+    .partner2-about {
+        top: -7px;
+        left: 14px;
+    }
+    .partner3-photo {
+        right: 10px;
+    }
+    .partner3-img {
+        background-position-y: -84px;
+        bottom: 37px;
+        left: 127px;
+    }
+    .partner3-name {
+        top: -22px;
+        right: 6px;
+    }
+    .partner3-about {
+        top: -7px;
+        right: 5px;
+    }
+    .partner4-photo {
+        left: 10px;
+    }
+    .partner4-img {
+        background-position-y: -126px;
+        top: -37px;
+        left: 149px;
+    }
+    .partner4-name {
+        top: -22px;
+    }
+    .partner4-about {
+        top: -7px;
+        left: 9px;
+    }
+}

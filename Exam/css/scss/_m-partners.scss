@@ -1,0 +1,106 @@
+//SCSS File
+@media (min-width: 320px) and (max-width: 767px) {
+    .partners-section-title {
+        width: 260px;
+    }
+    .partners-section {
+        position: relative;
+        top: 160px;
+        text-align: center;
+    }
+    .patners-list-ul {
+        margin-top: 20px;
+    }
+    .partners-list {
+        li{
+            margin: 0 auto;
+        }
+    }
+    .partners-list-items {
+        position: relative;
+    }
+    .partner-list-photo {
+
+    }
+    .partner-list-img {
+
+    }
+    .partner-list-name {
+
+    }
+    .partner-list-about {
+        width: 220px;
+    }
+    .partner1-photo {
+        top: -6px;
+
+    }
+    .partner1-img {
+        top: -41px;
+    }
+    .partner1-name {
+        top: -28px;
+    }
+    .partner1-about {
+        top: -13px;
+    }
+    .partner2-photo {
+        top: 14px;
+    }
+
+.partner2-img {
+    top: -22px;
+    background-position-y: -42px;
+}
+.partner2-name {
+    top: -8px;
+}
+.partner2-about {
+    top: 7px;
+}
+.partner3-photo {
+    top: 35px;
+}
+.partner3-img {
+    background-position-y: -84px;
+}
+.partner3-name {
+    top: 13px;
+}
+.partner3-about {
+    top: 28px;
+}
+.partner4-photo {
+    top: 55px;
+}
+.partner4-img {
+    background-position-y: -126px;
+    top: 18px;
+}
+.partner4-name {
+    top: 33px;
+}
+.partner4-about {
+    top: 48px;
+}
+.more-partners {
+    position: relative;
+    top: 75px;
+
+    a {
+        margin: 0 auto;
+        display: block;
+        font-size: 14px;
+        font-family: "Montserrat", Arial;
+        color: rgb(255, 78, 80);
+        font-weight: bold;
+        line-height: 36px;
+        text-align: center;
+        width: 276px;
+        height: 36px;
+        @include border-radius(20px);
+        border: 2px solid rgb(255, 78, 80);
+    }
+}
+
+}

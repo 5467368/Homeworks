@@ -1,0 +1,88 @@
+//SCSS File
+@media (min-width: 320px) and (max-width: 767px) {
+.grid-sizer,
+.grid-item {
+    width: 310px;
+
+}
+.grid-item {
+    float: left;
+    max-height: 125px;
+    box-sizing: border-box;
+    border: 10px solid white;
+    margin: 0 auto;
+    height: 120px;
+    overflow: hidden;
+
+}
+.grid {
+    //height: 920px;
+}
+.grid-item img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.tile-section {
+    position: inherit;
+    top: 180px;
+}
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.tile-section-title {
+    font-size: 22px;
+    font-family: "Montserrat", Arial;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+}
+.tile-section-title2 {
+    position: inherit;
+    top: 110px;
+}
+.search-section-title {
+    font-size: 18px;
+    font-family: "Roboto", Arial;
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    text-align: center;
+
+}
+.search-section {
+    position: relative;
+    top: 302px;
+    text-align: center;
+}
+.search-field {
+    input {
+        width: 262px;
+        height: 38px;
+        border: 1px solid #cccccc;
+        @include border-radius(5px);
+        padding-left: 16px;
+        font-size: 14px;
+        font-family: "Roboto", Arial;
+        color: rgb(153, 153, 153);
+        line-height: 1.2;
+        margin-top: 15px;
+    }
+}
+.search-button {
+    margin: 10px 0 0 19px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Montserrat", Arial;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    background: #ff4e50;
+    @include border-radius(20px);
+    height: 40px;
+    width: 280px;
+}
+}

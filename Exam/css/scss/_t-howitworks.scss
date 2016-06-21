@@ -1,0 +1,101 @@
+@media (min-width: 768px) and (max-width: 1439px) {
+    .howitworks {
+        height: 780px;
+        top: 95px;
+    }
+    .howitworks-title {
+        position: absolute;
+        left: 244px;
+        top: 0;
+    }
+    .howitworks-steps {
+        position: absolute;
+        top: 59px;
+    }
+    .howitworks-step1 {
+        background: url("../img/Step1-t.jpg");
+    }
+    .howitworks-step2 {
+        background: url("../img/Step2-t.jpg");
+    }
+    .howitworks-step3 {
+        background: url("../img/Step3-t.jpg");
+        margin-right: 0;
+    }
+    .howitworks-step {
+      height: 400px;
+      width: 236px;
+      display: inline-block;
+      margin: 0 10px;
+      float: left;
+    }
+    .howitworks-step-head,
+    .howitworks-step-title,
+    .howitworks-step-inner{
+        position: absolute;
+    }
+    .howitworks-step1-head{
+        top: 212px;
+        left: 20px;
+    }
+    .howitworks-step1-title {
+        top: 233px;
+        left: 18px;
+    }
+    .howitworks-step1-inner {
+        top: 318px;
+        left: 18px;
+        width: 200px;
+        height: 67px;
+        line-height: 1.25;
+    }
+    .howitworks-step2-head{
+        top: 259px;
+        left: 21px;
+    }
+    .howitworks-step2-title {
+        top: 280px;
+        left: 18px;
+    }
+    .howitworks-step2-inner {
+        top: 335px;
+        left: 19px;
+        width: 200px;
+        height: 67px;
+        line-height: 1.25;
+    }
+    .howitworks-step3-head{
+        top: 212px;
+        left: 22px;
+    }
+    .howitworks-step3-title {
+        top: 233px;
+        left: 19px;
+    }
+    .howitworks-step3-inner {
+        top: 318px;
+        left: 18px;
+        width: 200px;
+        height: 67px;
+        line-height: 1.25;
+    }
+    .howitworks-step-arrowleft {
+        position: absolute;
+        background-image: url("../img/arr-l-t.png");
+        top: 40px;
+        left: 10px;
+        opacity: 0.8;
+        width: 30px;
+        height: 56px;
+    }
+    .howitworks-step-arrowright {
+        position: absolute;
+        background-image: url("../img/arr-r-t.png");
+        top: 40px;
+        //left: 186px;
+        opacity: 0.8;
+        width: 30px;
+        height: 56px;
+        right: 15px;
+    }
+}

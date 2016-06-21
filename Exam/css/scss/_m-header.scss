@@ -1,0 +1,42 @@
+//SCSS File
+@media (min-width: 320px) and (max-width: 767px) {
+    .wrapper {
+        width: 320px;
+    }
+    .header{
+        background: url("../img/headbkg-mob.jpg") no-repeat top center;
+        height: 540px;
+    }
+    .header-autoriz {
+        top: 20px;
+        height: 40px;
+    }
+    .header-title {
+        top: 169px;
+    }
+    .header-title-row2 {
+        font-size: 30px;
+        margin-top: 23px;
+        line-height: 1.25;
+    }
+    .header-title-row3 {
+        font-size: 18px;
+        line-height: 1.2;
+        margin: 12px auto;
+        width: 235px;
+        font-weight: 200;
+
+    }
+    .header-find {
+        width: 280px;
+        height: 40px;
+        top: 362px;
+        left: 20px;
+
+        a {
+            line-height: 40px;
+            font-size: 14px;
+        }
+    }
+
+}

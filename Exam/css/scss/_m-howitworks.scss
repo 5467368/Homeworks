@@ -1,0 +1,98 @@
+//SCSS File
+@media (min-width: 320px) and (max-width: 767px) {
+.howitworks {
+    height: 780px;
+    top: 95px;
+}
+.howitworks-title {
+    margin-left: 5px;
+}
+.howitworks-steps {
+    width: 300px;
+    margin: 0px auto;
+}
+.howitworks-step {
+    height: 240px;
+    margin: 10px 0;
+    width: 300px;
+}
+
+.howitworks-step-ul {
+    width: 260px;
+    margin: 0px auto;
+}
+.howitworks-step1 {
+    background: url("../img/Step1-m.jpg");
+}
+.howitworks-step2 {
+    background: url("../img/Step2-m.jpg");
+}
+.howitworks-step3 {
+    background: url("../img/Step3-m.jpg");
+}
+.howitworks-step-head {
+    font-size: 10px;
+    font-family: "Montserrat", Arial;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 21px;
+    text-align: center;
+    width: 70px;
+    height: 21px;
+    background-color: rgb(255, 78, 80);
+    @include border-radius(10px);
+    letter-spacing: 1.5px;
+    position: absolute;
+
+}
+.howitworks-step-title {
+    font-size: 24px;
+    font-family: "Montserrat", Arial;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.23;
+    text-align: left;
+    margin-top: 15px;
+    position: absolute;
+    overflow: hidden;
+}
+.howitworks-step-inner {
+    font-size: 14px;
+    font-weight: 200;
+    font-family: "Roboto", Arial;
+    color: rgb(204, 204, 204);
+    line-height: 1.2;
+    width: 259px;
+    height: 45px;
+    position: absolute;
+    opacity: 0.7;
+    overflow: hidden;
+}
+.howitworks-step1-head{
+    top: 69px;
+}
+.howitworks-step1-title {
+    top: 89px;
+}
+.howitworks-step1-inner {
+    top: 175px;
+}
+.howitworks-step2-head{
+    top: 99px;
+}
+.howitworks-step2-title {
+    top: 120px;
+}
+.howitworks-step2-inner {
+    top: 175px;
+}
+.howitworks-step3-head{
+    top: 69px;
+}
+.howitworks-step3-title {
+    top: 89px;
+}
+.howitworks-step3-inner {
+    top: 175px;
+}
+}
